@@ -1,0 +1,23 @@
+apply plugin: 'android'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "19.0.0"
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 19
+    }
+
+    buildTypes {
+        release {
+            runProguard true
+            proguardFiles 'proguard.cfg'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: '*.jar')
+
+}
